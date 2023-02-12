@@ -7,3 +7,5 @@
 ---
 
 ### Project created with sveltekit, use npm run dev to start a development server
+
+## Initial figma designs https://www.figma.com/file/tV30lSQ8qSkGAGBfxoyjLD/Terraforming-Mars?node-id=7%3A1103&t=E0bjhrC8smXE4CPI-1
