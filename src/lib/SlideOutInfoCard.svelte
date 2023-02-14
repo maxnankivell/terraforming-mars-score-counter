@@ -3,18 +3,23 @@
 	import CaretRight from 'phosphor-svelte/lib/CaretRight';
 
 	export let isPullToLeft: boolean;
+	export let isComingSoon: boolean;
 	let isPulledOut: boolean = false;
 </script>
 
 <div
-	class="grid grid-cols-[1fr_4rem_4rem_1fr] h-full w-[200%] bg-slate-100 rounded-2xl 
+	class="relative grid grid-cols-[1fr_4rem_4rem_1fr] h-full w-[200%] place-items-center bg-white rounded-2xl 
+	p-6 transition-all duration-200
 	{!isPullToLeft ? (isPulledOut ? 'ml-[calc(100vw-100%)]' : 'ml-[-100%]') : ''}
-	{isPullToLeft && isPulledOut ? 'ml-[-100vw]' : ''}"
+	{isPullToLeft && isPulledOut ? 'ml-[-100vw]' : ''}
+	{isComingSoon ? 'pointer-events-none touch-none select-none' : ''}"
 	on:click={() => (isPulledOut = !isPulledOut)}
 	on:keypress={(event) => (event.key === 'enter' ? (isPulledOut = !isPulledOut) : ``)}
 >
 	{#if isPullToLeft}
-		<div><slot name="title" /><slot name="button" /></div>
+		<div class="flex flex-col justify-center items-center gap-4 text-center">
+			<slot name="title" /><slot name="button" />
+		</div>
 	{:else}
 		<slot name="infotext" />
 	{/if}
@@ -23,7 +28,18 @@
 	{#if isPullToLeft}
 		<slot name="infotext" />
 	{:else}
-		<div><slot name="title" /><slot name="button" /></div>
+		<div class="flex flex-col justify-center items-center gap-4 text-center">
+			<slot name="title" /><slot name="button" />
+		</div>
+	{/if}
+
+	{#if isComingSoon}
+		<div
+			class="w-1/2 h-full absolute left-0 top-0 z-10 bg-white rounded-2xl opacity-80 text-cadmiumOrange-500 
+			text-opacity-80 text-center grid place-items-center text-4xl"
+		>
+			<h3 class="-rotate-12"><b>COMING SOON</b></h3>
+		</div>
 	{/if}
 </div>
 
