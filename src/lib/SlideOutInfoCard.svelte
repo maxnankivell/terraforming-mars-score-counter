@@ -2,21 +2,21 @@
 	import CaretLeft from 'phosphor-svelte/lib/CaretLeft';
 	import CaretRight from 'phosphor-svelte/lib/CaretRight';
 
-	export let isPullToLeft: boolean;
+	export let isSlideDirectionLeft: boolean;
 	export let isComingSoon: boolean;
 	let isPulledOut: boolean = false;
 </script>
 
 <div
 	class="relative grid grid-cols-[1fr_4rem_4rem_1fr] h-full w-[200%] place-items-center bg-white rounded-2xl 
-	p-6 transition-all duration-200
-	{!isPullToLeft ? (isPulledOut ? 'ml-[calc(100vw-100%)]' : 'ml-[-100%]') : ''}
-	{isPullToLeft && isPulledOut ? 'ml-[-100vw]' : ''}
+	p-6 transition-all duration-200 hover:cursor-pointer
+	{!isSlideDirectionLeft ? (isPulledOut ? 'ml-[calc(100vw-100%)]' : 'ml-[-100%]') : ''}
+	{isSlideDirectionLeft && isPulledOut ? 'ml-[-100vw]' : ''}
 	{isComingSoon ? 'pointer-events-none touch-none select-none' : ''}"
 	on:click={() => (isPulledOut = !isPulledOut)}
 	on:keypress={(event) => (event.key === 'enter' ? (isPulledOut = !isPulledOut) : ``)}
 >
-	{#if isPullToLeft}
+	{#if isSlideDirectionLeft}
 		<div class="flex flex-col justify-center items-center gap-4 text-center">
 			<slot name="title" /><slot name="button" />
 		</div>
@@ -25,7 +25,7 @@
 	{/if}
 	<CaretLeft size={`2rem`} />
 	<CaretRight size={`2rem`} />
-	{#if isPullToLeft}
+	{#if isSlideDirectionLeft}
 		<slot name="infotext" />
 	{:else}
 		<div class="flex flex-col justify-center items-center gap-4 text-center">

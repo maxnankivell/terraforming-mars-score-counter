@@ -7,7 +7,7 @@
 		WELCOME TO THE <b>TERRAFORMING MARS</b> SCORE CALCULATOR
 	</h1>
 	<div class="pl-8 overflow-hidden">
-		<SlideOutInfoCard isPullToLeft={true} isComingSoon={false}>
+		<SlideOutInfoCard isSlideDirectionLeft={true} isComingSoon={false}>
 			<h3 slot="title" class="text-lg font-semibold">CALCULATE YOUR FINAL SCORE</h3>
 			<button slot="button" class="button-primary"> FINAL SCORE CALCULATOR </button>
 			<p slot="infotext" class="text-base font-normal">
@@ -17,7 +17,7 @@
 		</SlideOutInfoCard>
 	</div>
 	<div class="pr-8 overflow-hidden">
-		<SlideOutInfoCard isPullToLeft={false} isComingSoon={false}>
+		<SlideOutInfoCard isSlideDirectionLeft={false} isComingSoon={false}>
 			<h3 slot="title" class="text-lg font-semibold">CALCULATE YOUR SCORE AT EACH TURN</h3>
 			<button slot="button" class="button-primary">TURN BASED CALCULATOR</button>
 			<p slot="infotext" class="text-base font-normal">
@@ -27,7 +27,7 @@
 		</SlideOutInfoCard>
 	</div>
 	<div class="pl-8 overflow-hidden">
-		<SlideOutInfoCard isPullToLeft={true} isComingSoon={true}>
+		<SlideOutInfoCard isSlideDirectionLeft={true} isComingSoon={true}>
 			<h3 slot="title" class="text-lg font-semibold">CALCULATE SCORE WITH BOARD SIMULATOR</h3>
 			<button slot="button" class="button-primary">BOARD SIM CALCULATOR</button>
 			<p slot="infotext" class="text-base font-normal" />
