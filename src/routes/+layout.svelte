@@ -2,13 +2,9 @@
 	import '../styles/global.css';
 </script>
 
-<div class="global-styles bg-orange-200 dark:bg-orange-200">
+<main class="w-screen h-screen bg-cadmiumOrange-500">
 	<slot />
-</div>
+</main>
 
 <style lang="postcss">
-	.global-styles {
-		width: 100vw;
-		height: 100vh;
-	}
 </style>
