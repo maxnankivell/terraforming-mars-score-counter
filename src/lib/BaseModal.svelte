@@ -1,0 +1,91 @@
+<script lang="ts">
+	import { createEventDispatcher, onDestroy } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+	const close = () => dispatch('close');
+
+	let modal: HTMLDivElement;
+
+	const handle_keydown = (e: KeyboardEvent) => {
+		if (e.key === 'Escape') {
+			close();
+			return;
+		}
+
+		if (e.key === 'Tab') {
+			// trap focus
+			const nodes = <NodeListOf<HTMLElement>>modal.querySelectorAll('*');
+			const tabbable = Array.from(nodes).filter((n) => n.tabIndex >= 0);
+
+			const activeElement: HTMLElement | null = <HTMLElement>document.activeElement;
+			if (!activeElement) {
+				return;
+			}
+			let index = tabbable.indexOf(activeElement);
+			if (index === -1 && e.shiftKey) {
+				index = 0;
+			}
+
+			index += tabbable.length + (e.shiftKey ? -1 : 1);
+			index %= tabbable.length;
+
+			tabbable[index].focus();
+			e.preventDefault();
+		}
+	};
+
+	const previously_focused = typeof document !== 'undefined' && <HTMLElement>document.activeElement;
+
+	if (previously_focused) {
+		onDestroy(() => {
+			previously_focused.focus();
+		});
+	}
+</script>
+
+<svelte:window on:keydown={handle_keydown} />
+
+<div
+	class="modal-background"
+	on:click={close}
+	on:keydown={(e) => (e.key === 'Escape' ? close() : ``)}
+/>
+
+<div
+	class="modal grid grid-rows-[auto_1fr_auto] overscroll-none rounded-3xl"
+	role="dialog"
+	aria-modal="true"
+	bind:this={modal}
+>
+	<slot name="header" />
+	<hr class="my-2" />
+	<slot />
+	<hr class="my-2" />
+	<slot name="footer" />
+</div>
+
+<style lang="postcss">
+	.modal-background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		z-index: 9999;
+	}
+
+	.modal {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: calc(100vw - 4em);
+		max-width: 32em;
+		max-height: calc(100vh - 4em);
+		overflow: auto;
+		transform: translate(-50%, -50%);
+		padding: 1.5rem;
+		background: white;
+		z-index: 9999;
+	}
+</style>
