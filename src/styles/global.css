@@ -4,6 +4,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.button-primary {
+	@apply bg-darkOliveGreen
+	text-white
+	text-base 
+	p-3 
+	leading-4 
+	rounded-[2.5rem];
+}
+
 @layer base {
   html {
     font-family: Exo, system-ui, sans-serif;
