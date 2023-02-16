@@ -3,6 +3,9 @@ module.exports = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
 		extend: {
+			fontFamily: {
+				Exo: ['"Exo"', 'sans-serif']
+			},
 			colors: {
 				cadmiumOrange: {
 					DEFAULT: '#E98B43',
