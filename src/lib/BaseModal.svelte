@@ -46,35 +46,23 @@
 <svelte:window on:keydown={handle_keydown} />
 
 <div
-	class="modal-background"
+	class="fixed top-0 left-0 w-screen h-screen bg-black opacity-30 z-50"
 	on:click={close}
 	on:keydown={(e) => (e.key === 'Escape' ? close() : ``)}
 />
 
 <div
-	class="modal grid grid-rows-[auto_1fr_auto] overscroll-none rounded-3xl"
+	class="modal grid grid-rows-[auto_1fr_auto] gap-4 overscroll-none rounded-3xl"
 	role="dialog"
 	aria-modal="true"
 	bind:this={modal}
 >
 	<slot name="header" />
-	<hr class="my-2" />
 	<slot />
-	<hr class="my-2" />
 	<slot name="footer" />
 </div>
 
 <style lang="postcss">
-	.modal-background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(0, 0, 0, 0.3);
-		z-index: 9999;
-	}
-
 	.modal {
 		position: absolute;
 		left: 50%;

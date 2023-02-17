@@ -13,21 +13,27 @@
 	</div>
 
 	<div
-		class="grid grid-cols-[auto_1fr] grid-rows-13 items-center gap-4 overflow-auto overscroll-none"
+		class="row-start-2 row-end-3 col-start-1 col-end-2 mt-[2px] w-full h-8 bg-gradient-to-b from-white to-transparent z-20 pointer-events-none"
+	/>
+
+	<div
+		class="grid grid-cols-[auto_1fr] grid-rows-5 items-center content-center gap-4 overflow-auto overscroll-none 
+		border-x-0 border-y-2 border-cadmiumOrange-500 row-start-2 row-end-3 col-start-1 col-end-2 pt-4 pb-4"
 	>
-		<div class="bg-red-500 w-6 h-6" />
+		<div class="bg-red-500 w-6 h-6 rounded-sm border border-black" />
 		<div class="flex flex-col">
-			<label for="player_1" class="block mb-1 font-medium text-gray-900">Red Player</label>
+			<label for="player_1" class="block font-medium text-gray-900">Red Player</label>
 			<input
 				type="text"
 				id="player_1"
 				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
+				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+				focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
 			/>
 		</div>
-		<div class="bg-blue-500 w-6 h-6" />
+		<div class="bg-blue-500 w-6 h-6 rounded-sm border border-black" />
 		<div class="flex flex-col">
-			<label for="player_2" class="block mb-1 font-medium text-gray-900">Blue Player</label>
+			<label for="player_2" class="block font-medium text-gray-900">Blue Player</label>
 			<input
 				type="text"
 				id="player_2"
@@ -35,9 +41,9 @@
 				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
 			/>
 		</div>
-		<div class="bg-black w-6 h-6" />
+		<div class="bg-black w-6 h-6 rounded-sm border border-black" />
 		<div class="flex flex-col">
-			<label for="player_3" class="block mb-1 font-medium text-gray-900">Black Player</label>
+			<label for="player_3" class="block font-medium text-gray-900">Black Player</label>
 			<input
 				type="text"
 				id="player_3"
@@ -45,9 +51,9 @@
 				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
 			/>
 		</div>
-		<div class="bg-green-500 w-6 h-6" />
+		<div class="bg-green-500 w-6 h-6 rounded-sm border border-black" />
 		<div class="flex flex-col">
-			<label for="player_4" class="block mb-1 font-medium text-gray-900">Green Player</label>
+			<label for="player_4" class="block font-medium text-gray-900">Green Player</label>
 			<input
 				type="text"
 				id="player_4"
@@ -55,110 +61,27 @@
 				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
 			/>
 		</div>
-		<div class="bg-yellow-500 w-6 h-6" />
+		<div class="bg-yellow-500 w-6 h-6 rounded-sm border border-black" />
 		<div class="flex flex-col">
-			<label for="player_4" class="block mb-1 font-medium text-gray-900">Yellow Player</label>
+			<label for="player_4" class="block font-medium text-gray-900">Yellow Player</label>
 			<input
 				type="text"
 				id="player_4"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_5" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_5"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_6" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_6"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_7" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_7"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_8" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_8"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_9" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_9"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_10" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_10"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_12" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_12"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_13" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_13"
-				placeholder="Enter Name Here"
-				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
-			/>
-		</div>
-		<div class="bg-red-500 w-6 h-6" />
-		<div class="flex flex-col">
-			<label for="player_14" class="block mb-1 font-medium text-gray-900"> First name </label>
-			<input
-				type="text"
-				id="player_14"
 				placeholder="Enter Name Here"
 				class="block w-full px-2 py-1 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cadmiumOrange-500 focus:border-cadmiumOrange-500 focus:outline-cadmiumOrange-500"
 			/>
 		</div>
 	</div>
 
-	<div slot="footer" class="flex flex-row-reverse items-center">
-		<button class="button-base bg-cadmiumOrange-500 box shadow-md">Confirm</button>
+	<div
+		class="row-start-2 row-end-3 col-start-1 col-end-2 mb-[2px] mt-auto w-full h-8 bg-gradient-to-t from-white to-transparent z-20 pointer-events-none"
+	/>
+
+	<div slot="footer" class="flex items-center justify-center gap-5">
+		<button class="button-base bg-champagne-500 hover:bg-champagne-400">Cancel</button>
+		<button class="button-base bg-cadmiumOrange-500 text-white hover:bg-cadmiumOrange-400">
+			Confirm
+		</button>
 	</div>
 </BaseModal>
 
