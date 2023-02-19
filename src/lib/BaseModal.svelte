@@ -52,7 +52,9 @@
 />
 
 <div
-	class="modal grid grid-rows-[auto_1fr_auto] gap-4 overscroll-none rounded-3xl"
+	class="absolute grid grid-rows-[auto_1fr_auto] gap-4 left-1/2 top-1/2 w-[calc(100vw-4em)] 
+	max-w-lg max-h-[calc(100vh-4em)] overflow-auto -translate-x-1/2 -translate-y-1/2 p-6 bg-white 
+	z-50 overscroll-none rounded-3xl"
 	role="dialog"
 	aria-modal="true"
 	bind:this={modal}
@@ -63,17 +65,4 @@
 </div>
 
 <style lang="postcss">
-	.modal {
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		width: calc(100vw - 4em);
-		max-width: 32em;
-		max-height: calc(100vh - 4em);
-		overflow: auto;
-		transform: translate(-50%, -50%);
-		padding: 1.5rem;
-		background: white;
-		z-index: 9999;
-	}
 </style>

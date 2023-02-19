@@ -23,7 +23,7 @@
 
 	<div
 		class="row-start-2 row-end-3 col-start-1 col-end-2 mt-[2px] w-full h-8 bg-gradient-to-b 
-		from-white to-transparent z-20 pointer-events-none"
+		from-white z-20 pointer-events-none"
 	/>
 
 	<div
@@ -47,8 +47,8 @@
 	</div>
 
 	<div
-		class="row-start-2 row-end-3 col-start-1 col-end-2 mb-[2px] mt-auto w-full h-8 bg-gradient-to-t 
-		from-white to-transparent z-20 pointer-events-none"
+		class="row-start-2 row-end-3 col-start-1 col-end-2 mb-[2px] self-end w-full h-8 bg-gradient-to-t 
+		from-white z-20 pointer-events-none"
 	/>
 
 	<div slot="footer" class="flex items-center justify-center gap-5">
