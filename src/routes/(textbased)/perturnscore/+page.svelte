@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ScoreEntryArea from '$lib/ScoreEntryArea.svelte';
+	import ScoreEntryArea from '$lib/ScoreEntryList.svelte';
 </script>
 
 <ScoreEntryArea />
