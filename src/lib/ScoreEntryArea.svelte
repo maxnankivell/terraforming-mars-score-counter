@@ -35,5 +35,5 @@
 	</EntryListItem>
 </div>
 
-<style>
+<style lang="postcss">
 </style>
