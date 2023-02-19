@@ -3,7 +3,7 @@
 	import CaretRight from 'phosphor-svelte/lib/CaretRight';
 	import type { PlayerColor } from '../constants/player-colors';
 	import PositionIndicator from './PositionIndicator.svelte';
-	import ScoreEntryArea from './ScoreEntryArea.svelte';
+	import ScoreEntryList from './ScoreEntryList.svelte';
 
 	export let playerName: string;
 	export let playerColor: PlayerColor;
@@ -37,7 +37,7 @@ justify-items-center rounded-t-[40px] bg-white drop-shadow-lg pb-4">
 	/>
 
 	<div class="col-start-2 row-start-2 overflow-auto px-4 py-7">
-		<ScoreEntryArea />
+		<ScoreEntryList />
 	</div>
 
 	<div
