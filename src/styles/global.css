@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    font-family: Exo, system-ui, sans-serif;
+}
+
 .button-primary {
 	@apply bg-darkOliveGreen
 	text-white
@@ -22,19 +26,52 @@
 	shadow-md;
 }
 
-/* ::-webkit-scrollbar {
-	width: 10px;
+.red {
+	background: theme('colors.red.500');
 }
-::-webkit-scrollbar-track {
-	background: black;
-	border-radius: 4px;
+
+.green {
+	background: theme('colors.green.500');
+}
+
+.yellow {
+	background: theme('colors.yellow.500');
+}
+
+.blue {
+	background: theme('colors.blue.500');
+}
+
+.black {
+	background: theme('colors.black');
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* * {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) #F9E5CB;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
 }
 ::-webkit-scrollbar-thumb {
-	background: lightblue;
+	background: #F9E5CB;
 	border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-	background: blue;
+	background: #eda269;
 }
 ::-webkit-scrollbar-button,
 ::-webkit-scrollbar-corner {
