@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PlayerEntryModal from '$lib/PlayerEntryModal.svelte';
 	import SlideOutInfoCard from '$lib/SlideOutInfoCard.svelte';
 </script>
 
@@ -34,6 +35,8 @@
 		</SlideOutInfoCard>
 	</div>
 </div>
+
+<PlayerEntryModal />
 
 <style lang="postcss">
 </style>
