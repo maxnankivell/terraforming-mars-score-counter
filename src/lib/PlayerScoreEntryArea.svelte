@@ -23,25 +23,25 @@ justify-items-center rounded-t-[40px] bg-white drop-shadow-lg pb-4">
 		</div>
 	</div>
 
-	<div class="self-center col-start-1 row-start-1 row-end-3 pl-4">
-		<CaretLeft color="#E98B43" size="24" weight="bold" />
-	</div>
+	<button class="self-center col-start-1 row-start-1 row-end-3 ml-4 drop-shadow-md">
+		<CaretLeft color="#E98B43" size="2rem" weight="bold" />
+	</button>
 
-	<div class="self-center col-start-3 row-start-1 row-end-3 pr-4">
-		<CaretRight color="#E98B43" size="24" weight="bold" />
-	</div>
+	<button class="self-center col-start-3 row-start-1 row-end-3 mr-4 drop-shadow-md">
+		<CaretRight color="#E98B43" size="2rem" weight="bold" />
+	</button>
 
 	<div
 		class="col-start-2 row-start-2 w-full h-8 bg-gradient-to-b 
 		from-white z-20 pointer-events-none"
 	/>
 
-	<div class="col-start-2 row-start-2 overflow-auto px-4 py-7">
+	<div class="col-start-2 row-start-2 overflow-auto px-4 pt-7 pb-14">
 		<ScoreEntryList />
 	</div>
 
 	<div
-		class="col-start-2 row-start-2 self-end w-full h-8 bg-gradient-to-t 
+		class="col-start-2 row-start-2 self-end w-full h-14 bg-gradient-to-t 
 		from-white z-20 pointer-events-none"
 	/>
 

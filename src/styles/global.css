@@ -11,7 +11,8 @@ html {
 .button-primary {
 	@apply bg-darkOliveGreen
 	text-white
-	text-base 
+	text-base
+	font-semibold
 	p-3 
 	leading-4 
 	rounded-[2.5rem]
@@ -20,6 +21,7 @@ html {
 
 .button-base {
 	@apply text-base 
+	font-semibold
 	p-3 
 	leading-4 
 	rounded-[2.5rem]
